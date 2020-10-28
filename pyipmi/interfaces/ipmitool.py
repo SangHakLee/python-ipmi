@@ -192,6 +192,7 @@ class Ipmitool(object):
         cmd += (' -I %s' % self._interface_type)
         cmd += (' -H %s' % self._session.rmcp_host)
         cmd += (' -p %s' % self._session.rmcp_port)
+        cmd += (' -R %d' % 1)
 
         if self._session.auth_type == Session.AUTH_TYPE_NONE:
             cmd += ' -P ""'
